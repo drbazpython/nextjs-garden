@@ -1,16 +1,51 @@
-html,
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightblue
+}
+.header {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 12px 10px;
+  font-size: 25px;
 }
 
-a {
-  color: inherit;
+.header a {
+  color:forestgreen;
+  display: inline-block;
+  padding-top: 10px;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+main {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+.plants-list {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.plant-card a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color:green;
+  font-size: 20px;
+}
+
+.plant-card img{
+  display:block;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 1px solid black;
 }
