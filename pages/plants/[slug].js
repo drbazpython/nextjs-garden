@@ -1,42 +1,6 @@
 /** dynamic routing based on slug*/
 import { sanityClient, urlFor, PortableText, usePreviewSubscription} from "../../lib/sanity"
-import { LitElement, html, css } from "lit";
 
-
-class MyGarden extends LitElement{
-    constructor(){
-        super();
-        this.plant = garden.name;
-    }
-    static get properties(){
-        return{
-            name: { type: String }
-        };
-    }
-
-    render(){
-            return html`
-                <div class="card">   
-                        <h3> <b> ${this.name} </b> </h3>
-                    </div>
-                </div>
-            `;
-        }
-    
-    
-    static get styles(){
-        return css`
-            .card{
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                transition: 0.3s;
-                border-radius: 5px;
-                width: 100px;
-            }
-        `;
-    }
-}
-
-customElements.define('mygarden',MyGarden);
 
 const gardenQuery ='*[_type == "garden" && slug.current ==$slug][0]'+
 '{_id,name,slug,typeofplant,plantImage}';
